@@ -1,0 +1,138 @@
+@(userForm: Form[User])
+
+@main("Carona-me!") {
+    <head><style>
+
+    h1 {
+        text-shadow: 4px 4px #0f0f0f;
+    }
+
+    .center {
+        position: absolute;
+        font-size: 18px;
+        left: 0%;
+        top: 12%;
+        width: 100%;
+    }
+
+    body{
+        background-image: url("/assets/images/carona.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    div.relative {
+        position: relative;
+        left: 500px;
+        top: 160px;
+        width: 350px;
+    }
+
+    #email {
+        position: absolute;
+        left: 500px;
+        top: 168px;
+        width: 350px;
+    }
+
+    #password {
+        position: absolute;
+        left: 500px;
+        top: 275px;
+        width: 350px;
+    }
+
+    #type {
+        position: absolute;
+        left: 500px;
+        top: 365px;
+        width: 350px;
+    }
+
+    #mobileOS{
+        position: absolute;
+        left: 500px;
+        top: 456px;
+        width: 350px;
+    }
+
+    #bottonSend{
+        position: absolute;
+        font-size: 18px;
+        left: 59%;
+        top: 90%;
+        width: 100%;
+    }
+
+
+
+    </style></head>
+
+    <body>
+
+    <div class="center">
+        <h1 style="color: white; text-align: center; font-family: Goudy Stout; "> Carona-me! </h1>
+    </div>
+
+    @helper.form(action = routes.Application.submit(), args = 'class -> "userForm") {
+
+        <div id="email">
+        @helper.input(userForm("")) { (id, name, value, args) =>
+            <label for="email"> <h5 style ="color: white;"><b> Email: </b></h5></label>
+            <input type="email" name="@name" id="@id" class="form-control" placeholder="Digite o e-mail" autofocus @toHtmlArgs(args) >
+
+        }
+        </div>
+
+        <div id="password">
+            <label for="password"> <h5 style ="color: white;"><b> Senha: </b></h5></label>
+            <input type="password" class="form-control" placeholder="Digite a senha" autofocus >
+        </div>
+
+        <br>
+        <div id="mobileOS">
+            <label for="mobileOS"> <h5 style ="color: white;"><b> Sistema Operacional:</b></h5></label>
+            <select class="form-control" id="exampleSelect1" size="1,2">
+                <option>Selecione...</option>
+                <option>Android</option>
+                <option>iOS</option>
+                <option>Windows Phone</option>
+            </select>
+        </div>
+
+        <br>
+        <div id="type">
+            <label for="type"> <h5 style ="color: white;"><b> Tipo:</b></h5></label>
+            <select class="form-control" id="exampleSelect1" size="1,2">
+                <option>Selecione...</option>
+                <option>Motorista</option>
+                <option>Passageiro</option>
+            </select>
+        </div>
+
+        <br>
+        <div id="bottonSend">
+            <form action="submit.scala.html" method="get">
+                <input type="submit" class="btn btn-primary" value="Criar Conta"> </form>
+        </div>
+    }
+</body>
+
+    <br>        <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
+    <br>        <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
+    <!-- Exemplo com AngularJS-->
+    <div ng-app>
+
+        <form role="form">
+            <div class="form-group">
+                <label for="sometext">Digite algo:</label>
+                <input id="sometext" class="form-control" ng-model="sometext" autofocus>
+            </div>
+        </form>
+        <div class="alert alert-success" ng-show="sometext">
+            <strong>Você digitou:</strong> {{ sometext }}
+        </div>
+    </div>
+}
