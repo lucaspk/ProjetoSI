@@ -78,7 +78,7 @@
 
     @helper.form(action = routes.Application.submit(), args = 'class -> "userForm") {
 
-        <div id="email">
+        <div class = "center" id="email">
         @helper.input(userForm("")) { (id, name, value, args) =>
             <label for="email"> <h5 style ="color: white;"><b> Email: </b></h5></label>
             <input type="email" name="@name" id="@id" class="form-control" placeholder="Digite o e-mail" autofocus @toHtmlArgs(args) >
@@ -127,7 +127,7 @@
 
         <form role="form">
             <div class="form-group">
-                <label for="sometext">Digite algo:</label>
+                <label for="sometext">Digite algo para mostrar:</label>
                 <input id="sometext" class="form-control" ng-model="sometext" autofocus>
             </div>
         </form>
