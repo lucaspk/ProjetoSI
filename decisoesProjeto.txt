@@ -4,3 +4,5 @@ fossem herança, o relacionamento estaria amarrado em tempo de compilação, sen
 O sistema deve ser flexível para permitir isso.
 
 - teste commit
+
+- testando novo commit
