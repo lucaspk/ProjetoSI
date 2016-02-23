@@ -5,4 +5,4 @@ O sistema deve ser flexível para permitir isso.
 
 - teste commit
 
-- testando novo commit
+- testando novo commit3
