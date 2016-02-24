@@ -1,6 +1,6 @@
 @(userForm: Form[User])
 
-@main("Carona-me!") {
+@main("Login - Carona-me!") {
 
     <style>
 
@@ -24,13 +24,6 @@
 
     }
 
-    div.relative {
-        position: relative;
-        left: 500px;
-        top: 160px;
-        width: 350px;
-    }
-
     #email {
         position: absolute;
         left: 500px;
@@ -45,25 +38,11 @@
         width: 350px;
     }
 
-    #type {
-        position: absolute;
-        left: 500px;
-        top: 365px;
-        width: 350px;
-    }
-
-    #mobileOS{
-        position: absolute;
-        left: 500px;
-        top: 456px;
-        width: 350px;
-    }
-
-    #bottonSend{
+    #bottonLogin {
         position: absolute;
         font-size: 18px;
-        left: 56%;
-        top: 475px;
+        left: 58%;
+        top: 370px;
         width: 100%;
     }
 
@@ -92,19 +71,9 @@
         </div>
 
         <br>
-        <div id="type">
-            <label for="type"> <h5 style ="color: white;"><b> Tipo:</b></h5></label>
-            <select class="form-control" id="exampleSelect1" size="1,2">
-                <option>Selecione...</option>
-                <option>Motorista</option>
-                <option>Passageiro</option>
-            </select>
-        </div>
-
-        <br>
-        <div id="bottonSend">
+        <div id="bottonLogin">
             <form action="submit.scala.html" method="get">
-                <input type="submit" class="btn btn-primary" value="Criar Conta"> </form>
+                <input type="submit" class="btn btn-primary" value="Login"> </form>
         </div>
     }
 </body>
