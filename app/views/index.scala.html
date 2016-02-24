@@ -1,7 +1,8 @@
 @(userForm: Form[User])
 
 @main("Carona-me!") {
-    <head><style>
+
+    <style>
 
     h1 {
         text-shadow: 4px 4px #0f0f0f;
@@ -61,14 +62,13 @@
     #bottonSend{
         position: absolute;
         font-size: 18px;
-        left: 59%;
-        top: 90%;
+        left: 56%;
+        top: 475px;
         width: 100%;
     }
 
 
-
-    </style></head>
+    </style>
 
     <body>
 
@@ -92,17 +92,6 @@
         </div>
 
         <br>
-        <div id="mobileOS">
-            <label for="mobileOS"> <h5 style ="color: white;"><b> Sistema Operacional:</b></h5></label>
-            <select class="form-control" id="exampleSelect1" size="1,2">
-                <option>Selecione...</option>
-                <option>Android</option>
-                <option>iOS</option>
-                <option>Windows Phone</option>
-            </select>
-        </div>
-
-        <br>
         <div id="type">
             <label for="type"> <h5 style ="color: white;"><b> Tipo:</b></h5></label>
             <select class="form-control" id="exampleSelect1" size="1,2">
@@ -120,19 +109,4 @@
     }
 </body>
 
-    <br>        <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
-    <br>        <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
-    <!-- Exemplo com AngularJS-->
-    <div ng-app>
-
-        <form role="form">
-            <div class="form-group">
-                <label for="sometext">Digite algo para mostrar:</label>
-                <input id="sometext" class="form-control" ng-model="sometext" autofocus>
-            </div>
-        </form>
-        <div class="alert alert-success" ng-show="sometext">
-            <strong>Você digitou:</strong> {{ sometext }}
-        </div>
-    </div>
 }
