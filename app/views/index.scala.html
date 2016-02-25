@@ -2,7 +2,18 @@
 
 @main("Login - Carona-me!") {
 
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
     <style>
+
+    body{
+        background-image: url("/assets/images/carona.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     h1 {
         text-shadow: 4px 4px #0f0f0f;
@@ -11,17 +22,8 @@
     .center {
         position: absolute;
         font-size: 18px;
-        left: 0%;
         top: 12%;
         width: 100%;
-    }
-
-    body{
-        background-image: url("/assets/images/carona.jpg");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-
     }
 
     #email {
@@ -41,25 +43,9 @@
     #buttonLogin {
         position: absolute;
         font-size: 18px;
-        left: 58%;
         top: 370px;
         width: 100%;
     }
-
-    #buttonCadastrar {
-        position: absolute;
-        font-size: 18px;
-        left: 50%;
-        top: 370px;
-        width: 100%;
-    }
-    #buttonHelp {
-        position: absolute;
-        font-size: 18px;
-        left: 44.5%;
-        top: 370px;
-    }
-
 
     </style>
 
@@ -71,7 +57,7 @@
 
     @helper.form(action = routes.Application.submit(), args = 'class -> "userForm") {
 
-        <div class = "center" id="email">
+        <div id="email">
         @helper.input(userForm("")) { (id, name, value, args) =>
             <label for="email"> <h5 style ="color: white;"><b> Email: </b></h5></label>
             <input type="email" name="@name" id="@id" class="form-control" placeholder="Digite o e-mail" autofocus @toHtmlArgs(args) >
@@ -85,9 +71,9 @@
         </div>
 
         <br>
-        <div id="buttonLogin">
-            <form action="submit.scala.html" method="get">
-                <input type="submit" class="btn btn-primary" value="Login"> </form>
+        <div id="buttonLogin" align="center">
+            <form action="submit.scala.html" method="get" >
+                <input type="submit" class="btn btn-primary"  value="Login"> </form>
         </div>
 
     }

@@ -3,22 +3,29 @@
 @main(s"Home") {
 
 
-    <<!DOCTYPE html>
     <html>
     <head>
     	<title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+
+
 
     <style>
 
+        body{
+            background-color: #fffbf9 ;
+
+        }
+
     	#menu ul{
-		    width: 300px;
+		    width: 250px;
 		    height: auto;
-		    background-color: #2f4f4f;
+		    background-color: #d78d35 ;
 		    display: block;
 		    margin: 0;
 		    padding: 0;
-		    width: 306px;
+
 		}	
 
 		#menu li{
@@ -32,11 +39,11 @@
 		    font-size: 20px;
 		    padding: 20px;
 		    text-align: center;
-		    
+
 		}
 
 		#menu li:hover{
-			background: #0B0B61;
+			background: #835513 ;
 			width: 350px;
 		}
 
@@ -52,32 +59,29 @@
 			color: #8fbc8f;
 		}
 
-
-
-    	body{
-			background-image: url("/assets/images/blue.jpg");
-    		background-attachment: fixed;
-    		background-repeat: no-repeat;
-    		background-size: cover;
-    	}
-
     	.center {
 		   	position: absolute;
 		    font-size: 12px;
-		    left: 15%;
 		    top: 1%;
 		    width: 100%;
 		}
+        #menulo {
+            position: absolute;
+            font-size: 12px;
+            left: 41%;
+            top: 20%;
+            width: 100%;
+        }
 
     </style>
 
 
     <body>
     	<div class="center">
-        <h1 style="color: white; text-align: center; font-family: Tahoma; "> Bem vindo, João! </h1> </div>
+        <h1 style="color: red; text-align: center; font-family: Tahoma; "> Bem vindo, João! </h1> </div>
 
         <div id="menu">
-        	<ul>
+        	<ul id="menulo">
         		<li>EDITAR CADASTRO</li>
         		<li>BUSCAR</li>
         		<li>NOTIFICAÇÕES</li>
