@@ -1,17 +1,96 @@
 @(created: User)
 
-@main(s"Início - Carona-me!") {
+@main(s"Home") {
 
-    <h1>Bem-vindo </h1>
+
+    <<!DOCTYPE html>
+    <html>
+    <head>
+    	<title>Home</title>
+    </head>
 
     <style>
-        body{
-        background-image: url("/assets/images/telaInicial.jpg");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
 
-        }
+    	#menu ul{
+		    width: 300px;
+		    height: auto;
+		    background-color: #2f4f4f;
+		    display: block;
+		    margin: 0;
+		    padding: 0;
+		    width: 306px;
+		}	
+
+		#menu li{
+		    list-style: none;
+		    display: block;
+		    width: 100%;
+		    height: auto;
+		    border-bottom: 2px solid #fff;
+		    color: #fffafa;
+		    font-family: Tahoma;
+		    font-size: 20px;
+		    padding: 20px;
+		    text-align: center;
+		    
+		}
+
+		#menu li:hover{
+			background: #0B0B61;
+			width: 350px;
+		}
+
+		#menu li{
+			-webkit-transition:all .9s ease;
+			-moz-transition:all .9s ease;
+			-ms-transition:all .9s ease;
+			transition: all .9s ease;
+		}
+
+		h1{
+			font-family: Tahoma;
+			color: #8fbc8f;
+		}
+
+
+
+    	body{
+			background-image: url("/assets/images/blue.jpg");
+    		background-attachment: fixed;
+    		background-repeat: no-repeat;
+    		background-size: cover;
+    	}
+
+    	.center {
+		   	position: absolute;
+		    font-size: 12px;
+		    left: 15%;
+		    top: 1%;
+		    width: 100%;
+		}
 
     </style>
+
+
+    <body>
+    	<div class="center">
+        <h1 style="color: white; text-align: center; font-family: Tahoma; "> Bem vindo, João! </h1> </div>
+
+        <div id="menu">
+        	<ul>
+        		<li>EDITAR CADASTRO</li>
+        		<li>BUSCAR</li>
+        		<li>NOTIFICAÇÕES</li>
+        		<li>SAIR</li>
+        	</ul>
+        	
+        </div>
+    
+    </body>
+
+
+
+    </html>
+
+
 }
