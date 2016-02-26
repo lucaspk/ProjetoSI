@@ -1,45 +1,28 @@
-@(userForm: Form[User])
-
 @main("Login - Carona-me!") {
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
+<div class="center">
+    <h1 style="color: white; text-align: center; font-family: Goudy Stout; "> Carona-me! </h1>
+</div>
 
-    <body>
-
-    <div class="center">
-        <h1 style="color: white; text-align: center; font-family: Goudy Stout; "> Carona-me! </h1>
-    </div>
-
-    @helper.form(action = routes.Application.submit(), args = 'class -> "userForm") {
-
-       <div class="almostJumbotron">
-                <form>
-        @helper.input(userForm("")) { (id, name, value, args) =>
-            <div class="form-group">
-                <label for="email"> <h5 style ="color: white;"><b> Email: </b></h5></label>
-                <input type="email" name="@name" id="@id" class="form-control" placeholder="Digite o e-mail" autofocus @toHtmlArgs(args) >
-            </div>
-        }
-                    <div class="form-group">
-                        <label for="password"> <h5 style ="color: white;"><b> Senha: </b></h5></label>
-                        <input type="password" class="form-control" placeholder="Digite a senha" autofocus >
-                    </div>
+<div class="almostJumbotron">
+    <form action="/signin" method="post" >
+        <div class="form-group">
+            <label for="email"> <h5 style ="color: white;"><b> Email: </b></h5></label>
+            <input type="email" class="form-control" placeholder="Digite o e-mail" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="password"> <h5 style ="color: white;"><b> Senha: </b></h5></label>
+            <input type="password" class="form-control" placeholder="Digite a senha" autofocus >
+        </div>
 
         <br>
 
-            <form action="submit.scala.html" method="get" >
-                <input type="submit" class="btn btn-primary"  value="Login">
-            </form>
-                <form action="cadastro.scala.html" method="get" >
-                    <input type="submit" class="btn btn-primary"  value="Cadastrar">
-                </form>
-                </form>
-            </div>
+        <input type="submit" class="btn btn-primary"  value="Login">
+    </form>
 
-
-    }
-</body>
+    <form action="/signup" method="get" >
+        <input type="submit" class="btn btn-primary"  value="Cadastrar">
+    </form>
+</div>
 
 }
