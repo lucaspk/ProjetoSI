@@ -6,6 +6,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.index;
 import views.html.submit;
+import views.html.cadastro;
 
 import static play.data.Form.form;
 
@@ -24,5 +25,12 @@ public class Application extends Controller {
         User created = filledForm.get();
         //Envia o objeto "created" para a View. O objeto "submit" representa a view.
         return ok(submit.render(created));
+    }
+
+    public Result cadastro(){
+        Form<User> filledForm = userForm.bindFromRequest();
+        //Pega o que foi preenchido no formulário
+        User created = filledForm.get();
+        return ok(cadastro.render(created));
     }
 }

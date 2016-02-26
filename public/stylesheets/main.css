@@ -1,0 +1,53 @@
+
+body{
+    background-image: url("../images/carona.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-shadow: 4px 4px #0f0f0f;
+}
+
+.center {
+    position: absolute;
+    font-size: 18px;
+    top: 12%;
+    width: 100%;
+}
+
+#email {
+    position: absolute;
+    left: 500px;
+    top: 168px;
+    width: 350px;
+}
+
+#password {
+    position: absolute;
+    left: 500px;
+    top: 275px;
+    width: 350px;
+}
+
+#buttonLogin {
+    position: absolute;
+    font-size: 18px;
+    top: 370px;
+    width: 100%;
+}
+
+.almostJumbotron{
+    background-color: transparent;
+    background:transparent;
+    width: 400px;
+    text-align: center;
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 60px;
+    font-size: 18px;
+    text-align: justify;
+}

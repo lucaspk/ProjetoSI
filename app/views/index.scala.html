@@ -6,49 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <style>
-
-    body{
-        background-image: url("/assets/images/carona.jpg");
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    h1 {
-        text-shadow: 4px 4px #0f0f0f;
-    }
-
-    .center {
-        position: absolute;
-        font-size: 18px;
-        top: 12%;
-        width: 100%;
-    }
-
-    #email {
-        position: absolute;
-        left: 500px;
-        top: 168px;
-        width: 350px;
-    }
-
-    #password {
-        position: absolute;
-        left: 500px;
-        top: 275px;
-        width: 350px;
-    }
-
-    #buttonLogin {
-        position: absolute;
-        font-size: 18px;
-        top: 370px;
-        width: 100%;
-    }
-
-    </style>
-
     <body>
 
     <div class="center">
@@ -57,24 +14,30 @@
 
     @helper.form(action = routes.Application.submit(), args = 'class -> "userForm") {
 
-        <div id="email">
+       <div class="almostJumbotron">
+                <form>
         @helper.input(userForm("")) { (id, name, value, args) =>
-            <label for="email"> <h5 style ="color: white;"><b> Email: </b></h5></label>
-            <input type="email" name="@name" id="@id" class="form-control" placeholder="Digite o e-mail" autofocus @toHtmlArgs(args) >
-
+            <div class="form-group">
+                <label for="email"> <h5 style ="color: white;"><b> Email: </b></h5></label>
+                <input type="email" name="@name" id="@id" class="form-control" placeholder="Digite o e-mail" autofocus @toHtmlArgs(args) >
+            </div>
         }
-        </div>
-
-        <div id="password">
-            <label for="password"> <h5 style ="color: white;"><b> Senha: </b></h5></label>
-            <input type="password" class="form-control" placeholder="Digite a senha" autofocus >
-        </div>
+                    <div class="form-group">
+                        <label for="password"> <h5 style ="color: white;"><b> Senha: </b></h5></label>
+                        <input type="password" class="form-control" placeholder="Digite a senha" autofocus >
+                    </div>
 
         <br>
-        <div id="buttonLogin" align="center">
+
             <form action="submit.scala.html" method="get" >
-                <input type="submit" class="btn btn-primary"  value="Login"> </form>
-        </div>
+                <input type="submit" class="btn btn-primary"  value="Login">
+            </form>
+                <form action="cadastro.scala.html" method="get" >
+                    <input type="submit" class="btn btn-primary"  value="Cadastrar">
+                </form>
+                </form>
+            </div>
+
 
     }
 </body>
