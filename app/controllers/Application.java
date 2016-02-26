@@ -26,6 +26,8 @@ public class Application extends Controller {
     public Result getCadastro() {
         return ok(cadastro.render());
     }
+
+
     public Result postCadastro() {
         //Form<User> filledForm = userForm.bindFromRequest();
         //User created = filledForm.get();
