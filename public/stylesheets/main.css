@@ -92,6 +92,10 @@ body{
     width: 100%;
 }
 
+.borda-2px {
+    text-shadow:#000 1px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px
+}
+
 
 h1 {
     font-family: "Century Schoolbook L";

@@ -1,27 +1,30 @@
 @main("Login - Carona-me!") {
 
-<div class="center">
-    <h1 style="color: white; text-align: center; font-family: Goudy Stout; "> Carona-me! </h1>
+    <div class="center">
+    <h1 class="borda-2px" style="color: #fffbf9 ;text-align: center; font-family: Goudy Stout; "> Carona-me! </h1>
 </div>
 
 <div class="almostJumbotron">
     <form action="/signin" method="post" >
         <div class="form-group">
-            <label for="email"> <h5 style ="color: white;"><b> Email: </b></h5></label>
-            <input type="email" class="form-control" placeholder="Digite o e-mail" autofocus>
+            <label for="email"> <h5 style ="color: white;"><b>
+                Email <span class="glyphicon glyphicon-user" aria-hidden="true"></span> </b></h5></label>
+            <input type="email" class="form-control" placeholder="Digite o e-mail"  autofocus>
+
         </div>
         <div class="form-group">
-            <label for="password"> <h5 style ="color: white;"><b> Senha: </b></h5></label>
+            <label for="password"> <h5 style ="color: white;"><b>
+                Senha <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </b></h5></label>
             <input type="password" class="form-control" placeholder="Digite a senha" autofocus >
         </div>
 
         <br>
 
-        <input type="submit" class="btn btn-primary"  value="Login">
+        <input type="submit" class="btn btn-default"  value="Login" style="color: #2aabd2;" >
     </form>
 
     <form action="/signup" method="get" >
-        <input type="submit" class="btn btn-primary"  value="Cadastrar">
+        <input type="submit" class="btn btn-default" style="color: #2aabd2;" value="Cadastrar">
     </form>
 </div>
 
