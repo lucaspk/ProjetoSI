@@ -4,6 +4,7 @@ import models.User;
 import play.*;
 import play.mvc.*;
 import play.data.Form;
+import views.html.busca;
 import views.html.index;
 import views.html.home;
 import views.html.cadastro;
@@ -34,4 +35,13 @@ public class Application extends Controller {
         //processar e guardar dados
         return ok(home.render());
     }
+
+    public Result getBusca(){
+        return ok(busca.render());
+    }
+
+    public Result getHome(){
+        return ok(home.render());
+    }
+
 }

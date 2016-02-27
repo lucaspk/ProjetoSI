@@ -10,6 +10,9 @@ POST    /signin                    controllers.Application.postLogin()
 GET     /signup                    controllers.Application.getCadastro()
 POST    /signup                    controllers.Application.postCadastro()
 
+GET     /search                    controllers.Application.getBusca()
+GET     /home                      controllers.Application.getHome()
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
