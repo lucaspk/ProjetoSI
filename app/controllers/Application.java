@@ -33,7 +33,7 @@ public class Application extends Controller {
         //Form<User> filledForm = userForm.bindFromRequest();
         //User created = filledForm.get();
         //processar e guardar dados
-        return ok(home.render());
+        return ok(index.render());
     }
 
     public Result getBusca(){
