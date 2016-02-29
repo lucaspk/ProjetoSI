@@ -3,13 +3,25 @@
 <div class="center">
     <h1 class = "borda-2px"> Bem vindo, João! </h1> </div>
 
-<div id="menu">
-    <ul id="menulo">
-        <li><a href="/account" style="color: white">EDITAR CADASTRO</a></li>
-        <li><a href="/search" style="color: white">BUSCAR</a></li>
-        <li><a href="/notification" style="color: white">NOTIFICAÇÕES</a></li>
-        <li><a href="/" style="color: white">SAIR</a></li>
 
-    </ul>
+<div id="menu">
+	<ul id="menulo">
+	   	<li><form action="/account" method="get" >
+	    <input type="submit" class="menu_button" value="CADASTRO"></form></li>
+
+	    <li><form action="/search" method="get" >
+	    <input type="submit" class="menu_button" value="BUSCAR"></form></li>
+
+	    <li><form action="/notification" method="get" >
+	    <input type="submit" class="menu_button" value="NOTIFICAÇÕES"></form></li>
+
+	    <li><form action="/horario" method="get" >
+	    <input type="submit" class="menu_button" value="HORÁRIO"></form></li>
+
+	    <li><form action="/" method="get" >
+	    <input type="submit" class="menu_button" value="SAIR"></form></li>
+
+	</ul>
 </div>
+
 }
