@@ -1,29 +1,60 @@
 @main("Cadastro") {
-
+    <div class="center">
+        <h1 class="borda-2px" style="color: #fffbf9 ;text-align: center; font-family: Goudy Stout; "> Cadastro! </h1>
+    </div>
 <div class="almostJumbotron">
     <form name="form" action="/signup" method="post">
-
         <div class="form-group">
-            <label for="Nome"> <h5 style ="color: white;"><b> Nome: </b></h5></label>
-            <input type="text" name = "login" class="form-control" placeholder="Nome" >
+            <input type="text" name = "nome" class="form-control" placeholder="Nome">
         </div>
         <div class="form-group">
-            <label for="E-mail"> <h5 style ="color: white;"><b> Email: </b></h5></label>
-            <input type="text" name = "senha" class="form-control" placeholder="Email">
+            <input type="text" name = "email" class="form-control" placeholder="Email">
         </div>
-
         <div class="form-group">
-            <label for="Bairro"> <h5 style ="color: white;"><b> Bairro: </b></h5></label>
-            <input type="text" name = "senha" class="form-control" placeholder="Bairro">
+            <input type="text" name = "senha" class="form-control" placeholder="Senha">
+        </div>
+        <div class="form-group">
+            <input type="text" name = "numeroMatricula" class="form-control" placeholder="Nº Matricula">
         </div>
 
         <div class="form-group">
-            <label for="Rua"> <h5 style ="color: white;"><b> Rua: </b></h5></label>
-            <input type="text" name = "senha" class="form-control" placeholder="Rua">
+            <input type="text" name = "rua" class="form-control" placeholder="Rua" >
         </div>
 
-        <input type="submit" class="btn btn-primary"  value="Cadastrar">
+        <div class="form-group">
+            <input type="text" name = "bairro" class="form-control" placeholder="Bairro" >
+        </div>
+
+        <div class="form-group">
+            <input type="text" name = "telefone" class="form-control" placeholder="Telefone">
+        </div>
+        <div class="form-group" id="vagas">
+            <input type="text" name = "vagas"  class="form-control" placeholder="Nº Vagas" >
+        </div>
+
+        <select name="opcoes" id="opcoes">
+            <option value="motorista">Motorista</option>
+            <option value="passageiro">Passageiro</option>
+        </select>
+
+        <input type="submit" class="btn btn-primary" value="Cadastrar" >
     </form>
-</div>
 
+</div>
+<script>
+    $('#opcoes').change(function(){
+
+        var selecionar = $(this).val();
+        switch(selecionar){
+            case "motorista":
+                $("#vagas").show()
+                break;
+            default:
+                $("#vagas").hide()
+        }
+
+    });
+
+
+</script>
 }

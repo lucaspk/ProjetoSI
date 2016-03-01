@@ -4,10 +4,7 @@ import models.User;
 import play.*;
 import play.mvc.*;
 import play.data.Form;
-import views.html.busca;
-import views.html.index;
-import views.html.home;
-import views.html.cadastro;
+import views.html.*;
 
 import static play.data.Form.form;
 
@@ -33,6 +30,7 @@ public class Application extends Controller {
         //Form<User> filledForm = userForm.bindFromRequest();
         //User created = filledForm.get();
         //processar e guardar dados
+        System.out.println("ss");
         return ok(index.render());
     }
 
@@ -44,4 +42,11 @@ public class Application extends Controller {
         return ok(home.render());
     }
 
+    public Result getHorario(){
+        return ok(horario.render());
+    }
+
+    public Result postHorario(){
+        return ok(home.render());
+    }
 }
