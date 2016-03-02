@@ -11,27 +11,33 @@ import static play.data.Form.form;
 public class Application extends Controller {
 
     static final Form<User> userForm = form(User.class);
-
+    private boolean editarCadastro = false;
     public Result index() {
         return ok(index.render());
     }
 
     public Result postLogin() {
         //processar email e senha, autenticar
-        return ok(home.render());
+        return redirect("/horario");
     }
 
     public Result getCadastro() {
         return ok(cadastro.render());
     }
 
+    public Result getCadastroNaHome(){
+        editarCadastro = true;
+        return ok(cadastro.render());
+    }
 
     public Result postCadastro() {
         //Form<User> filledForm = userForm.bindFromRequest();
         //User created = filledForm.get();
         //processar e guardar dados
-        System.out.println("ss");
-        return ok(index.render());
+        if(editarCadastro){
+            return redirect("/home");
+        }
+        return redirect("/horario");
     }
 
     public Result getBusca(){
@@ -47,6 +53,9 @@ public class Application extends Controller {
     }
 
     public Result postHorario(){
-        return ok(home.render());
+        return redirect("/home");
     }
+
+
+
 }

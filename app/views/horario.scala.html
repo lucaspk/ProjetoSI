@@ -1,13 +1,19 @@
-@main("Buscar") {
+@main("Horarios") {
     <div class="almostJumbotron">
         <form action="/horario" method="post">
             <div class="form-group">
                 <div class="form-group">
+                    <label for="saidaCasa"> <h5 style ="color: white;"><b>
+                        Horario de Saida de Casa </b></h5></label>
                     <input type="time" class="form-control" placeholder="Horario de Chegada"  autofocus>
                 </div>
                 <div class="form-group">
-                    <input type="time" class="form-control" placeholder="Horario de Saida"  autofocus>
+                    <label for="saidaUFCG"> <h5 style ="color: white;"><b>
+                        Horario de Saida da UFCG </b></h5></label>
+                    <input type="time" name = "saidaUfcg" class="form-control" placeholder="data" >
                 </div>
+                <label for="Endereco"> <h5 style ="color: white;"><b>
+                    Endereco </b></h5></label>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Rua"  autofocus>
                 </div>
@@ -17,8 +23,6 @@
 
             </div>
 
-
-            <input type="button" class="btn btn-default" style="color: #2aabd2;" value="Cancelar" onclick=window.location.href="/home">
             <input type="submit" class="btn btn-primary"  value="Salvar">
         </form>
     </div>
