@@ -14,6 +14,8 @@ POST    /signup                    controllers.Application.postCadastro()
 GET     /search                    controllers.Application.getBusca()
 GET     /home                      controllers.Application.getHome()
 
+GET  /notification                  controllers.Application.getNotification()
+
 GET     /horario                   controllers.Application.getHorario()
 POST    /horario                   controllers.Application.postHorario()
 # Map static resources from the /public folder to the /assets URL path
