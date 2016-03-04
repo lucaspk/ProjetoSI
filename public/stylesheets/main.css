@@ -47,7 +47,31 @@ body{
     text-decoration-color: red;
 }
 
+#welcome{
+    background-color:#D4AF37;
+    left: 250px;
+    position: relative;
+    width: 800px;
+}
+#aceitarCarona {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#rejeitarCarona {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#rejeitarCarona:hover {
+    background-color: #ff291c ;
+    color: white;
+}
 
+#aceitarCarona:hover {
+    background-color: #4CAF50;
+    color: white;
+}
 
 .center {
     text-align: center;
