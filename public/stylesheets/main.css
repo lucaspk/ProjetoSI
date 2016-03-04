@@ -36,6 +36,16 @@ body{
     text-align: justify;
 }
 
+.jumbotron{
+    width: 600px;
+    height: 200px;
+
+
+}
+
+.fontColor {
+    text-decoration-color: red;
+}
 
 
 

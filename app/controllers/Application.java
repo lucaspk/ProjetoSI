@@ -25,14 +25,14 @@ public class Application extends Controller {
         return ok(cadastro.render());
     }
 
-<<<<<<< HEAD
-    public Result getCadastroNaHome(){
+
+    public Result getCadastroNaHome() {
         editarCadastro = true;
         return ok(cadastro.render());
-=======
+    }
     public Result getNotification() {
         return ok(notification.render());
->>>>>>> 3fcacc0c860962d7ec0091bee775499c761bb4eb
+
     }
 
     public Result postCadastro() {
@@ -60,6 +60,7 @@ public class Application extends Controller {
     public Result postHorario(){
         return redirect("/home");
     }
+
 
 
 
