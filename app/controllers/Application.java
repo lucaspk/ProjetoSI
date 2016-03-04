@@ -13,12 +13,13 @@ public class Application extends Controller {
     static final Form<User> userForm = form(User.class);
     private boolean editarCadastro = false;
     public Result index() {
+        editarCadastro = false;
         return ok(index.render());
     }
 
     public Result postLogin() {
         //processar email e senha, autenticar
-        return redirect("/horario");
+        return redirect("/home");
     }
 
     public Result getCadastro() {
