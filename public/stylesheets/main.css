@@ -40,7 +40,6 @@ body{
     width: 600px;
     height: 200px;
 
-
 }
 
 .fontColor {
@@ -48,7 +47,8 @@ body{
 }
 
 #welcome{
-    background-color:#D4AF37;
+    color:white;
+    background-color: #5998d2;
     left: 250px;
     position: relative;
     width: 800px;
