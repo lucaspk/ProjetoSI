@@ -1,9 +1,78 @@
 .navbar {
-    background-color: #5998d2;
-    border-bottom: 0 none;
+    background-color: rgba(224, 224, 216, 0.8);
     font-size: 14px;
     transition: .25s all linear;
 }
+
+#menu-link-1{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+ }
+
+#menu-link-1:hover {
+    color: #b88f01;
+}
+
+#menu-link-6{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+#menu-link-6:hover {
+    color: #1ea79b;
+
+}
+
+#menu-link-2{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+#menu-link-2:hover {
+    color: #5d8c18;
+}
+
+#menu-link-3{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+#menu-link-3:hover {
+    color: #7b2c85;
+
+}
+
+#menu-link-4{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+#menu-link-4:hover {
+    color: #227999;
+
+}
+
+#menu-link-5{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+#menu-link-5:hover {
+    color: #c70908;
+}
+
 
 .navbar.inv {
     background-color: rgba( 0, 0, 0, .5 );
@@ -11,7 +80,7 @@
 }
 
 .navbar .nav a {
-    color: #E4DDDD;
+    color: #585151;
     font-family: "Titillium Web", sans-serif;
     font-weight: 600;
     transition: all .5 linear;
