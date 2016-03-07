@@ -62,6 +62,9 @@ public class Application extends Controller {
         return redirect("/home");
     }
 
+    public Result getInfoCarona(){
+        return ok(passageiros.render());
+    }
 
 
 

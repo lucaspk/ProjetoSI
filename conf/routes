@@ -20,5 +20,6 @@ GET     /horario                   controllers.Application.getHorario()
 POST    /horario                   controllers.Application.postHorario()
 
 
+GET     /InfoCarona                controllers.Application.getInfoCarona()
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

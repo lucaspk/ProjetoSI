@@ -1,30 +1,278 @@
 @main("Horario atual") {
-   <div class="almostJumbotron">
-        <form action="/horario" method="post">
-            <div class="form-group">
-                <div class="form-group">
-                    <label for="saidaCasa"> <h5 style ="color: white;"><b>
-                        Horario de Saida de Casa </b></h5></label>
-                    <input type="time" class="form-control" placeholder="Horario de Chegada"  autofocus>
-                </div>
-                <div class="form-group">
-                    <label for="saidaUFCG"> <h5 style ="color: white;"><b>
-                        Horario de Saida da UFCG </b></h5></label>
-                    <input type="time" name = "saidaUfcg" class="form-control" placeholder="data" >
-                </div>
-                <label for="Endereco"> <h5 style ="color: white;"><b>
-                    Endereco </b></h5></label>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Rua"  autofocus>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Bairro"  autofocus>
-                </div>
+
+    <body xmlns:br="http://www.w3.org/1999/html">
+            <div class="row">
+                    <div class="col-md-12">
+                        <div id="bemVindo">
+                            <h3>
+                                Bem-vindo à página de horários!
+
+                            </h3>
+                                <h4>Aqui você pode cadastrar e ver informações sobre seus horários</h4>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <br>
+
+
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="panel panel-info" style="background-color: transparent" >
+                            <form action="/horario" method="post">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="diasSemana"> <h5 style ="color: #2aabd2;"><b>
+                                            Dia da Semana</b></h5></label>
+                                        <select class="form-control">
+                                            <option value="segunda">Segunda</option>
+                                            <option value="terca">Terça</option>
+                                            <option value="quarta">Quarta</option>
+                                            <option value="quinta">Quinta</option>
+                                            <option value="sexta">Sexta</option>
+
+                                        </select>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="horario"> <h5 style ="color: #2aabd2;"><b>
+                                            Horario </b></h5></label>
+                                        <select class="form-control">
+                                            <option value="hora">8:00</option>
+                                            <option value="hora">10:00</option>
+                                            <option value="hora">12:00</option>
+                                            <option value="hora">14:00</option>
+                                            <option value="hora">16:00</option>
+                                            <option value="hora">18:00</option>
+                                            <option value="hora">20:00</option>
+                                            <option value="hora">22:00</option>
+                                        </select>
+                                    </div>
+
+                                    <label for="tipoCarona"> <h5 style ="color:  #2aabd2;"><b>
+                                        Tipo de Carona</b></h5></label>
+                                    <br>
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio">Ida</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio">Volta</label>
+                                    </div>
+
+
+                                </div>
+
+
+                            </form>
+                            <button id="singlebutton" name="salvar" class="btn btn-primary center-block">
+                               Salvar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-md-offset-1">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;color: floralwhite">Horario</th>
+                                        <th style="text-align: center;color: floralwhite">Segunda</th>
+                                        <th style="text-align: center;color: floralwhite">Terça</th>
+                                        <th style="text-align: center;color: floralwhite">Quarta</th>
+                                        <th style="text-align: center;color: floralwhite">Quinta</th>
+                                        <th style="text-align: center;color: floralwhite">Sexta</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="color: floralwhite">8:00</td>
+                                        <td>
+
+                                        </td>
+                                        <td></td>
+                                        <td style="background-color: green" >
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                        <td style="background-color: green">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: floralwhite">10:00</td>
+                                        <td></td>
+                                        <td style="background-color: green">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="background-color: blue">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="background-color: green">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="background-color: green">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td style="color: floralwhite">12:00</td>
+                                        <td></td>
+                                        <td style="background-color: blue">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                        <td style="background-color: blue">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="background-color: blue">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: floralwhite">14:00</td>
+                                        <td></td>
+                                        <td style="background-color: green">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                        <td style="background-color: green">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="background-color: green">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: floralwhite">16:00</td>
+                                        <td style="background-color: green">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td style="background-color: blue">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td style="background-color: blue">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="color: floralwhite">18:00</td>
+                                        <td style="background-color: blue">
+                                            <a href="/InfoCarona">
+                                                <div style="height:100%;width:100%;text-align: center;color:white;" >
+                                                    4 vagas
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: floralwhite">20:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color: floralwhite">22:00</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="legenda">
+                            <p style="color: floralwhite"><b>Legenda:</b></p>
+                            <div>
+                                <div></div> <b style="color: floralwhite">Ida</b> &nbsp &nbsp
+                                <div style="background-color: blue;  border: 1px solid rgb(151,187,205);"></div> <b style="color: floralwhite">Volta</b>
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
 
             </div>
 
-            <input type="submit" class="btn btn-primary"  value="Salvar">
-        </form>
-    </div>
+    </body>
+
 
 }

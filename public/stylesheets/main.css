@@ -106,6 +106,23 @@ body{
     position: absolute;
     width: 800px;
 }
+
+#bemVindo{
+    color:white;
+    background-color: #5998d2;;
+    width: 800px;
+    height: 143px;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 18px;
+    font-size: 18px;
+
+
+}
+
 #aceitarCarona {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -144,8 +161,21 @@ h1 {
     color:white;
 }
 
-
-
-
+#legenda {
+    float: left;
+}
+#legenda>div>div {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+#legenda div:nth-child(2) div {
+    background-color: rgb(30,230,30);
+    border: 1px solid rgb(30,230,30);
+}
+#legenda div:nth-child(3) div {
+    background-color: blue;
+    border: 1px solid rgb(151,187,205);
+}
 
 
