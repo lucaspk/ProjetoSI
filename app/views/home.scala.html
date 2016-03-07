@@ -9,10 +9,40 @@
 
     <div align="middle">
     	<br><br>
-        <img src="http://lorempixel.com/140/140/" class= "img-circle" class="img-responsive"
-        height="200" width="200" >
+        <div class="col-md-12">
+            <img id="minhaImagem" src="http://lorempixel.com/140/140/" class= "img-circle" class="img-responsive"
+            height="200" width="200">
+        </div>
+        <div class="col-md-12">
+            <br>
+            <br>
+        </div>
+        <div class="col-md-12">
+            <span class="file-input btn btn-primary btn-file">
+                Mudar Foto <input type="file" multiple>
+            </span>
+        </div>
+
     </div>
 
 </div>
+<script>
+        $(function () {
+            $(":file").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = imageIsLoaded;
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+
+        function imageIsLoaded(e) {
+            $('#minhaImagem').attr('src', e.target.result);
+            console.log(e.target.result);
+        };
+
+</script>
+
 
 }
