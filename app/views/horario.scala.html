@@ -19,7 +19,7 @@
 
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-md-offset-1">
                         <div class="panel panel-info" style="background-color: transparent" >
                             <form action="/horario" method="post">
                                 <div class="form-group">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8 col-md-offset-1">
+                    <div class="col-md-6 col-md-offset-0">
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <thead>
@@ -270,9 +270,78 @@
                         </div>
                     </div>
 
+                    <div class="col-md-2">
+                        <div class="panel panel-info" style="background-color: transparent" >
+                            <div class="form-group">
+                                <label for="rotas"> <h5 style ="color: #2aabd2;"><b>
+                                     Rotas</b></h5></label>
+                                <select class="form-control" id="selecaoBairro">
+                                    <option value="segunda">Malvinas</option>
+                                    <option value="terca">Centro</option>
+                                    <option value="quarta">Catole</option>
+                                    <option value="quinta">Bodocongó</option>
+                                    <option value="sexta">Alto Branco</option>
+
+                                </select>
+                                <br>
+                                <button id="singlebutton" name="Adicionar" class="btn btn-primary " onclick="adicionaRotas()">
+                                    Add
+                                </button>
+                                <button id="singlebutton" name="Adicionar" class="btn btn-primary " onclick="deletarRota()">
+                                    Del
+                                </button>
+                            </div>
+
+                            <div class="panel panel-primary">
+                                <table class="table table-striped" id="tabelaRotas">
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
     </body>
 
+    <script>
+        function adicionaRotas(){
+            var bairro = document.getElementById("selecaoBairro");
+            var table = document.getElementById("tabelaRotas");
 
+            if (bairro.selectedIndex >= 0) {
+                var tableLinha = table.insertRow(table.rows.length);
+                var celulaTabela = tableLinha.insertCell(0);
+
+                var objInputCheckBox = document.createElement("input");
+                objInputCheckBox.type = "checkbox";
+                celulaTabela.appendChild(objInputCheckBox);
+
+                var celulaBairro = tableLinha.insertCell(1);
+                celulaBairro.innerHTML = bairro.options[ bairro.selectedIndex ].text;
+
+            }
+        }
+
+        function deletarRota() {
+            var table = document.getElementById("tabelaRotas");
+
+            var tamTable = table.rows.length;
+
+
+            var contador = 0;
+
+            for (var i = 0; i < table.rows.length; i++) {
+
+                /*** Get checkbox object ***/
+                var chk = table.rows[i].cells[0].childNodes[0];
+                if (chk.checked) {
+                    /*** if checked we del ***/
+                    table.deleteRow(i);
+                    tamTable--;
+                    i--;
+                    contador = contador + 1;
+                }
+            }
+        }
+    </script>
 }
