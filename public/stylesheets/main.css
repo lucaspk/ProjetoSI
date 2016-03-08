@@ -389,4 +389,24 @@ h1 {
     border: 1px solid rgb(151,187,205);
 }
 
+#buscaNotify {
+    position: relative;
+    padding: 50px;
+    top: -470px;
+    right: -320px;
+}
+
+#filtro {
+    position: relative;
+    top: -13px;
+    right: 70px;
+}
+
+#list {
+    position: relative;
+    text-align: center;
+    top: -480px;
+}
+
+
 
