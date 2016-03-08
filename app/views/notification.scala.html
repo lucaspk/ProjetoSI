@@ -1,9 +1,7 @@
 @main("Notificações") {
-    <style xmlns="http://www.w3.org/1999/html">
+    <style xmlns="http://www.w3.org/1999/html">  </style>
 
-  </style>
   <body>
-
      <div class="row" >
         <div class="col-md-12">
             <div id="bemVindo">
@@ -52,7 +50,6 @@
       </div>
 
     <div class="row" id = "news">
-
         <div class="col-md-2 col-lg-offset-1">
         <div class="panel panel-primary"  style="width: 250px">
         <div class="panel-heading">
@@ -71,12 +68,12 @@
             <b>Horario Proposto</b>: Terça - 10:00 <br>
             <b>Bairro</b>: Malvinas<br>
             <b>Status</b>: Pendente<br>
-            <b>Tel:</b>(083) 99999-3333 <br>
 
         </p>
         <br>
         <div style="text-align: center;">
-            <button type="button" id = "aceitarCarona" class="btn btn-default;">
+
+            <button type="button" data-toggle="modal" data-target="#myModal" id = "aceitarCarona" class="btn btn-default;">
                 Aceitar
             </button>
             <button type="button" id = "rejeitarCarona" class="btn btn-default">
@@ -105,12 +102,11 @@
             <b>Horario Proposto</b>: Terça - 10:00 <br>
             <b>Bairro</b>: Malvinas<br>
             <b>Status</b>: Pendente<br>
-            <b>Tel:</b>(083) 99999-3333 <br>
 
         </p>
         <br>
         <div style="text-align: center;">
-            <button type="button" id = "aceitarCarona" class="btn btn-default;">
+            <button type="button" id = "aceitarCarona" data-toggle="modal" data-target="#myModal" class="btn btn-default;">
                 Aceitar
             </button>
             <button type="button" id = "rejeitarCarona" class="btn btn-default">
@@ -139,12 +135,11 @@
             <b>Horario Proposto</b>: Terça - 10:00 <br>
             <b>Bairro</b>: Malvinas<br>
             <b>Status</b>: Pendente<br>
-            <b>Tel:</b>(083) 99999-3333 <br>
 
         </p>
         <br>
         <div style="text-align: center;">
-            <button type="button" id = "aceitarCarona" class="btn btn-default;">
+            <button type="button" id = "aceitarCarona" data-toggle="modal" data-target="#myModal" class="btn btn-default;">
                 Aceitar
             </button>
             <button type="button" id = "rejeitarCarona" class="btn btn-default">
@@ -154,11 +149,26 @@
         </div>
         </div>
         </div>
-
-
 	</div>
 
-
+      <div class="container" >
+          <div class="modal fade" id="myModal" role="dialog" >
+              <div class="modal-dialog modal-sm" style="position: relative;right: 710px;" >
+                  <div class="modal-content" style="position: relative;right: 710px;">
+                      <div class="modal-header" style="position: relative;">
+                          <button type="button" class="close" data-dismiss="modal" style="position: relative;">&times;</button>
+                          <h4 class="modal-title">Você aceitou a carona!</h4>
+                      </div>
+                      <div class="modal-body" style="position: relative;">
+                          <p><center>O telefone do passageiro é :</center> <br> <center>(083) 99999-3333 </center></p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
 
   </body>
