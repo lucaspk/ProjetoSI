@@ -202,8 +202,8 @@ body{
     position: absolute;
     z-index: 1;
     top: 106px;
-    right:-10px;
-    animation:run 20s infinite linear;
+    right:420px;
+    animation:run infinite linear;
 }
 
 .car-body img{
@@ -393,7 +393,7 @@ h1 {
     position: relative;
     padding: 50px;
     top: -420px;
-    right: -355px;
+    right: -320px;
 }
 
 #filtro {
