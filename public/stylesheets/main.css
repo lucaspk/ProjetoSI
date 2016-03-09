@@ -392,8 +392,8 @@ h1 {
 #buscaNotify {
     position: relative;
     padding: 50px;
-    top: -470px;
-    right: -320px;
+    top: -420px;
+    right: -355px;
 }
 
 #filtro {
@@ -402,11 +402,7 @@ h1 {
     right: 70px;
 }
 
-#list {
-    position: relative;
-    text-align: center;
-    top: -480px;
-}
+
 
 
 

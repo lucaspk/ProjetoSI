@@ -1,5 +1,5 @@
 @main("Buscar") {
-
+  <body>
     <div class="row" >
         <div class="col-md-12">
             <div id="bemVindo">
@@ -11,11 +11,34 @@
 
             </div>
         </div>
-        <div class="col-md-12">
-            <br>
 
+        <div class="col-md-12 text-center">
+            <ul class="pagination" >
+                <li>
+                    <a href="#">Prev</a>
+                </li>
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">Next</a>
+                </li>
+            </ul>
         </div>
     </div>
+
 
         <div class="row" id = "filtro">
         <div class="col-md-2 col-md-offset-1">
@@ -50,19 +73,6 @@
                                 <option value="hora">22:00</option>
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label for="endereco"> <h5 style ="color: #2aabd2;"><b>
-                                Bairro </b></h5></label>
-                            <select class="form-control" id="selecaoBairro">
-                                <option value="segunda">Malvinas</option>
-                                <option value="terca">Centro</option>
-                                <option value="quarta">Catolé</option>
-                                <option value="quinta">Bodocongó</option>
-                                <option value="sexta">Alto Branco</option>
-                            </select>
-                        </div>
-
                         <label for="tipoCarona"> <h5 style ="color:  #2aabd2;"><b>
                             Tipo de Carona</b></h5></label>
                         <br>
@@ -72,8 +82,6 @@
                         <div class="radio">
                             <label><input type="radio" value="volta"name="optradio">Volta</label>
                         </div>
-
-
                     </div>
                 </form>
                 <button id="singlebutton" name="buscar" class="btn btn-primary center-block">
@@ -82,48 +90,6 @@
             </div>
         </div>
         </div>
-
-        @*<script>
-                $('#carona').change(function(){
-
-                    var selecionar = $(this).val();
-                    switch(selecionar){
-                        case "ida":
-                            $("cas").show()
-                            break;
-                        default:
-                            $("cas").hide()
-                    }
-
-                });
-        </script>*@
-
-        <div class="col-md-12 text-center" id = "list">
-        <ul class="pagination" >
-                <li>
-                    <a href="#">Prev</a>
-                </li>
-                <li>
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">4</a>
-                </li>
-                <li>
-                    <a href="#">5</a>
-                </li>
-                <li>
-                    <a href="#">Next</a>
-                </li>
-            </ul>
-            </div>
-
 
     <div class="row" id = "buscaNotify">
     <div class="col-md-3" id="1">
@@ -139,13 +105,13 @@
                 </div>
             </a>
             <p></p>
-            <p style="font-size: 12px"><b>Nome</b>: Fulano B. &nbsp &nbsp<br> <b>Tel:</b>(083) 99999-3333 <br>
+            <p style="font-size: 12px"><b>Nome</b>: Fulano A. &nbsp &nbsp<br> <b>Tel:</b>(083) 99999-3333 <br>
                 <b>Rua</b>: Aprinio Velosso Barosso <br>
                  <b>Bairro</b>: Malvinas
             </p>
 
             <div style="text-align: center;">
-                <input type="button" class="btn btn-default"  value="Carona-me" style="color: #2aabd2;"onclick="solicitaCarona()" >
+                <input type="button" class="btn btn-default"  value="Carona-me" style="color: #2aabd2;"data-toggle="modal" data-target="#myModal" class="btn btn-default;">
             </div>
         </div>
     </div>
@@ -164,13 +130,13 @@
                 </div>
             </a>
             <p></p>
-            <p style="font-size: 12px"><b>Nome</b>: Fulano B. &nbsp &nbsp<br> <b>Tel:</b>(083) 99999-3333 <br>
+            <p style="font-size: 12px"><b>Nome</b>: Fulano B. &nbsp &nbsp<br> <b>Tel:</b>(083) 99999-3332 <br>
                 <b>Rua</b>: Aprinio Velosso Barosso <br>
                 <b>Bairro</b>: Malvinas
             </p>
 
             <div style="text-align: center;">
-                <input type="button" class="btn btn-default"  value="Carona-me" style="color: #2aabd2;" onclick="solicitaCarona()">
+                <input type="button" class="btn btn-default"  value="Carona-me" style="color: #2aabd2;"data-toggle="modal" data-target="#myModal" class="btn btn-default;">
             </div>
         </div>
     </div>
@@ -191,13 +157,13 @@
                 </div>
             </a>
             <p></p>
-            <p style="font-size: 12px"><b>Nome</b>: Fulano B. &nbsp &nbsp<br> <b>Tel:</b>(083) 99999-3333 <br>
+            <p style="font-size: 12px"><b>Nome</b>: Fulano C. &nbsp &nbsp<br> <b>Tel:</b>(083) 99999-3331 <br>
                 <b>Rua</b>: Aprinio Velosso Barosso <br>
                 <b>Bairro</b>: Malvinas
             </p>
 
             <div style="text-align: center;">
-                <input type="button" class="btn btn-default"  value="Carona-me" style="color: #2aabd2;" >
+                <input type="button" class="btn btn-default"  value="Carona-me" style="color: #2aabd2;"data-toggle="modal" data-target="#myModal" class="btn btn-default;" >
             </div>
         </div>
         </div>
@@ -205,7 +171,25 @@
     </div>
     </div>
 
+    <div class="container" >
+        <div class="modal fade" id="myModal" role="dialog" >
+            <div class="modal-dialog modal-sm" style="position: relative;right: 710px;" >
+                <div class="modal-content" style="position: relative;right: 710px;">
+                    <div class="modal-header" style="position: relative;">
+                        <button type="button" class="close" data-dismiss="modal" style="position: relative;">&times;</button>
+                        <h4 class="modal-title">Sua carona foi solicitada!</h4>
+                    </div>
+                    <div class="modal-body" style="position: relative;">
+                        <p><center>Aguarde aprovação de seu pedido carona pelo motorista</center></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+  </body>
 
 }
