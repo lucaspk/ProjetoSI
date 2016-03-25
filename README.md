@@ -21,3 +21,7 @@ Uma vez dentro do sistema, no caso de ser um passageiro, o usuário tem a opçã
 Além disso, há a opção de editar as informações fornecidas no cadastro na opção “Cadastro” do menu superior. Estando nela, todas as informações do usuário estarão automaticamente nos campos, podendo ser editadas.
 
 Já em “Horários”, temos a opção de definir os horários do usuário. As diferenças entre Passageiro e Motorista nessa tela são: na deste aparecerá a opção de rota, bem como as vagas dos momentos do dia escolhidos e na daquele não. Além disso, há também o que é comum aos dois: o quadro semanal que ele escolherá os momentos de ida e volta.
+
+Há também a opção “Notificações” em que é possível visualizar todas as notificações recebidas, tanto no caso do Motorista quanto no do Passageiro. Não obstante, uma vez estando na tela de notificações, o usuário tem a opção de filtrar as solicitações de caronas. Para o caso do motorista, os pedidos, as pendentes e as aceitas; para o passageiro, as que ele pediu, as aceitadas e as pendentes. 
+
+Por fim, o botão sair em que fará logoff do sistema de caronas.
