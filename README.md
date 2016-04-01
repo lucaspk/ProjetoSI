@@ -8,7 +8,7 @@ O projeto visa oferecer uma solução computacional na prática da carona, levan
 Pensando nisso, surge então a ideia de criar um sistema informacional com enfoque em facilitar o oferecimento e o pedido de caronas. 
 
 
-- Inteiração com as telas
+- Interação com as telas
 
 A primeira tela diz respeito ao login no sistema. Caso o usuário não tenha cadastro, ele terá a opção de se cadastrar clicando no botão “Cadastrar” ao lado de “Login”.
 
