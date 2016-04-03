@@ -35,13 +35,13 @@ public class Solicitacao extends Model{
 	private void setStatus(StatusSolicitacao status) {
 		this.status = status;
 	}
-	
+
 	public void aceita(){
 		if (status == StatusSolicitacao.PENDENTE && carona.cadastraNovoPassageiro(passageiro_da_solicitacao)){
 			setStatus(StatusSolicitacao.ACEITA);
 		}
 	}
-	
+
 	public void rejeita(){
 		if (status == StatusSolicitacao.PENDENTE)
 			setStatus(StatusSolicitacao.RECUSADA);

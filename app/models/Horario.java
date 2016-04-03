@@ -32,12 +32,13 @@ public class Horario extends Model{
 
 	@Override
 	public boolean equals(Object obj) {
+		boolean answer = false;
 		if (obj instanceof Horario){
 			Horario other = (Horario) obj;
-			return dia == other.getDia() && tipo == other.getTipo();
+			answer = dia == other.getDia() && tipo == other.getTipo();
 		}
 
-		return false;
+		return answer;
 	}
 
 

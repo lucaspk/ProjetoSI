@@ -65,11 +65,12 @@ public class Carona extends Model{
 	
 	@Override
 	public boolean equals(Object obj) {
+		boolean answer = false;
 		if (obj instanceof Carona) {
 			Carona other = (Carona) obj;
-			return motorista.equals(other.getMotorista()) && horario.equals(other.getHorario());
+			answer = motorista.equals(other.getMotorista()) && horario.equals(other.getHorario());
 		}
 		
-		return false;
+		return answer;
 	}
 }

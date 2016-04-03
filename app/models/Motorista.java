@@ -17,7 +17,6 @@ public class Motorista extends Usuario{
 		this.caronas = new ArrayList<Carona>();
 		
 	}
-	
 
 	public List<String> getRota() {
 		return rota;
@@ -38,8 +37,8 @@ public class Motorista extends Usuario{
 	public void setCaronas(List<Carona> caronas) {
 		this.caronas = caronas;
 	}
-	
-	
+
+
 	@Override
 	public void setHorarios(List<Horario> horario){
 		super.setHorarios(horario);
@@ -57,7 +56,7 @@ public class Motorista extends Usuario{
 	@Override
 	public String toString() {
 		return "Nome do motorista: " + getNome() + "\n" +
-				"N�mero do telefone: " + getTelefone();
+				"Numero do telefone: " + getTelefone();
 	}
 	
 	

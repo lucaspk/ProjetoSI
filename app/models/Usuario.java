@@ -100,12 +100,13 @@ public abstract class Usuario extends Model{
 
     @Override
     public boolean equals (Object obj){
+        boolean answer = false;
         if (obj instanceof Usuario){
             Usuario usr = (Usuario) obj;
-            return nome.equals(usr.getNome()) && matricula.equals(usr.getMatricula());
+            answer = nome.equals(usr.getNome()) && matricula.equals(usr.getMatricula());
         }
 
-        return false;
+        return answer;
     }
 
 
