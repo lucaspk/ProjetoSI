@@ -6,7 +6,7 @@ public enum Hora {
 
         private int hora;
 
-        Horario(int hora) {this.hora = hora;}
+        Hora(int hora) {this.hora = hora;}
 
         public int getHora() { return hora; }
 
