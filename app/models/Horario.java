@@ -1,8 +1,8 @@
 package models;
 
+import models.*;
 import com.avaje.ebean.Model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 public class Horario extends Model{
 	

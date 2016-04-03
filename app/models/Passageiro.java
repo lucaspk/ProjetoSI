@@ -1,8 +1,7 @@
 package models;
 
 import com.avaje.ebean.Model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 public class Passageiro extends Usuario{
 	public Passageiro (String nome, String matricula, String telefone, String bairro, String email, String rua, String senha){

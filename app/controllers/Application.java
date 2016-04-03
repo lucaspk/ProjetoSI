@@ -1,6 +1,6 @@
 package controllers;
 
-import models.User;
+import models.*;
 import play.*;
 import play.mvc.*;
 import play.data.Form;
@@ -10,7 +10,7 @@ import static play.data.Form.form;
 
 public class Application extends Controller {
 
-    static final Form<User> userForm = form(User.class);
+    static final Form<Usuario> userForm = form(Usuario.class);
     private boolean editarCadastro = false;
     public Result index() {
         editarCadastro = false;

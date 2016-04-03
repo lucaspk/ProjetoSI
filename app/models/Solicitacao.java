@@ -1,8 +1,7 @@
 package models;
 
 import com.avaje.ebean.Model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 public class Solicitacao extends Model{
 	
