@@ -6,19 +6,19 @@ import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+
 public class Carona extends Model{
 	
 	private int vagas_disponiveis;
 	private Horario horario;
-	private List<Passageiro> listaPassageiros;
+	private List<Usuario> listaPassageiros;
 	private Motorista motorista;
 	
 	public Carona (Horario horario, Motorista motorista){
 		this.horario = horario;
 		this.motorista = motorista;
 		vagas_disponiveis = motorista.getNum_vagas();
-		listaPassageiros = new ArrayList<Passageiro>();
+		listaPassageiros = new ArrayList<Usuario>();
 	}
 	
 	public Horario getHorario(){
@@ -29,7 +29,7 @@ public class Carona extends Model{
 		return vagas_disponiveis;
 	}
 
-	public List<Passageiro> getListaPassageiros() {
+	public List<Usuario> getListaPassageiros() {
 		return listaPassageiros;
 	}
 
@@ -37,7 +37,7 @@ public class Carona extends Model{
 		return motorista;
 	}
 	
-	public boolean cadastraNovoPassageiro (Passageiro usr){
+	public boolean cadastraNovoPassageiro (Usuario usr){
 		boolean adicionou = false;
 		if (vagas_disponiveis > 0){
 			listaPassageiros.add(usr);
@@ -47,7 +47,7 @@ public class Carona extends Model{
 		return adicionou;
 	}
 	
-	public boolean removePassageiro (Passageiro usr){
+	public boolean removePassageiro (Usuario usr){
 		boolean removeu = false;
 		if (listaPassageiros.remove(usr)) {
 			vagas_disponiveis++;	
@@ -61,7 +61,7 @@ public class Carona extends Model{
 	public String toString(){
 		return "Motorista da carona: " + getMotorista() + "\n" +
 				"DADOS GERAIS DA CARONA: \n" + horario.toString() + "\n" +
-				"NUMERO DE VAGAS DISPON�VEIS: " + getVagas_disponiveis();
+				"NUMERO DE VAGAS DISPONIVEIS: " + getVagas_disponiveis();
 				
 	}
 	

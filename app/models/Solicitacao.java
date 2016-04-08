@@ -7,13 +7,13 @@ import javax.persistence.Id;
 public class Solicitacao extends Model{
 	
 	private Carona carona;
-	private Passageiro passageiro_da_solicitacao;
-	private StatusSolicitacao status;
+	private Usuario passageiro_da_solicitacao;
+	private String status;
 	
-	public Solicitacao (Carona c, Passageiro passageiro){
+	public Solicitacao (Carona c, Usuario passageiro){
 		this.carona = c;
 		this.passageiro_da_solicitacao = passageiro;
-		setStatus(StatusSolicitacao.PENDENTE);
+		setStatus("PENDENTE");
 		
 		// no momento da criacao da solicitacao, ela eh adicionada na lista
 		// de solicitacoes do motorista
@@ -25,27 +25,27 @@ public class Solicitacao extends Model{
 		return carona;
 	}
 
-	public Passageiro getPassageiro_da_solicitacao() {
+	public Usuario getPassageiro_da_solicitacao() {
 		return passageiro_da_solicitacao;
 	}
 	
-	public StatusSolicitacao getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	private void setStatus(StatusSolicitacao status) {
+	private void setStatus(String status) {
 		this.status = status;
 	}
 	
 	public void aceita(){
-		if (status == StatusSolicitacao.PENDENTE && carona.cadastraNovoPassageiro(passageiro_da_solicitacao)){
-			setStatus(StatusSolicitacao.ACEITA);
+		if (status == "PENDENTE" && carona.cadastraNovoPassageiro(passageiro_da_solicitacao)){
+			setStatus("ACEITA");
 		}
 	}
 	
 	public void rejeita(){
-		if (status == StatusSolicitacao.PENDENTE)
-			setStatus(StatusSolicitacao.RECUSADA);
+		if (status == "PENDENTE")
+			setStatus("REJEITADO");
 	}
 	
 	@Override

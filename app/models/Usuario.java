@@ -6,8 +6,8 @@ import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-public abstract class Usuario extends Model{
+
+public class Usuario extends Model{
 
 
     private String nome, matricula, telefone, bairro, email, rua, senha;

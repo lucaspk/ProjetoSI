@@ -1,11 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
-
 package models;
 
+import java.util.ArrayList;
+import java.util.List;
 import com.avaje.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
 
 public class Motorista extends Usuario{
 	
@@ -61,7 +61,7 @@ public class Motorista extends Usuario{
 	@Override
 	public String toString() {
 		return "Nome do motorista: " + getNome() + "\n" +
-				"N�mero do telefone: " + getTelefone();
+				"Numero do telefone: " + getTelefone();
 	}
 	
 	

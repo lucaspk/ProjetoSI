@@ -6,26 +6,26 @@ import javax.persistence.Id;
 
 public class Horario extends Model{
 	
-	private DiaDaSemana dia;
-	private TipoDaCarona tipo;
-	private Hora hora;
+	private String dia;
+	private String tipo;
+	private String hora;
 
-	public Horario(TipoDaCarona tipo, DiaDaSemana dia, Hora hora) {
+	public Horario(String tipo, String dia, String hora) {
 		this.dia = dia;
 		this.tipo = tipo;
 		this.hora = hora;
 		
 	}
 	
-	public Hora getHora() {
+	public String getHora() {
 		return hora;
 	}
 
-	public DiaDaSemana getDia() {
+	public String getDia() {
 		return dia;
 	}
 
-	public TipoDaCarona getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
 	
@@ -38,11 +38,5 @@ public class Horario extends Model{
 		}
 		
 		return false;
-	}
-	
-	
-	@Override
-	public String toString() {
-		return "Dia da semana: " + getDia() + "\n" + "Hora: " + hora.getHora() + "h" + "\n" + "Tipo: " + getTipo();
 	}
 }
