@@ -1,8 +1,7 @@
 package models;
 
 import com.avaje.ebean.Model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 public class Solicitacao extends Model{
 	
@@ -36,13 +35,13 @@ public class Solicitacao extends Model{
 	private void setStatus(String status) {
 		this.status = status;
 	}
-	
+
 	public void aceita(){
 		if (status == "PENDENTE" && carona.cadastraNovoPassageiro(passageiro_da_solicitacao)){
 			setStatus("ACEITA");
 		}
 	}
-	
+
 	public void rejeita(){
 		if (status == "PENDENTE")
 			setStatus("REJEITADO");

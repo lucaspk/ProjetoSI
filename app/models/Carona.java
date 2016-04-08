@@ -1,10 +1,8 @@
 package models;
 
 import com.avaje.ebean.Model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.*;
+import java.util.*;
 
 
 public class Carona extends Model{
@@ -67,11 +65,12 @@ public class Carona extends Model{
 	
 	@Override
 	public boolean equals(Object obj) {
+		boolean answer = false;
 		if (obj instanceof Carona) {
 			Carona other = (Carona) obj;
-			return motorista.equals(other.getMotorista()) && horario.equals(other.getHorario());
+			answer = motorista.equals(other.getMotorista()) && horario.equals(other.getHorario());
 		}
 		
-		return false;
+		return answer;
 	}
 }

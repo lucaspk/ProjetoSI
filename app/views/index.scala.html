@@ -1,20 +1,6 @@
 @main("Login - Carona-me!") {
 
-    <div class="container">
-        <div class="car car1">
-            <div class="car-body">
-                <img src="http://hasinhayder.github.io/CSS3-Keyframe-Transition/img/car.png" alt="" />
-            </div>
-            <div class="tair1 tair">
-                <img src="http://hasinhayder.github.io/CSS3-Keyframe-Transition/img/tyre.png" alt="" />
-            </div>
-            <div class="tair2 tair">
-                <img src="http://hasinhayder.github.io/CSS3-Keyframe-Transition/img/tyre.png" alt="" />
-            </div>
-        </div>
-    </div>
-
-    <div class="center" style="top:112px;">
+    <div class="center" style="top:150px;">
         <h1 class="borda-2px" id = "title">
             Carona-me!
         </h1>
@@ -22,22 +8,24 @@
 
 <div class="almostJumbotron" style="top:120px;">
     <form action="/signin" method="post" >
-        <div class="form-group">
+
+        <div class="form-group" name = "email">
             <label for="email"> <h5 style ="color: white;"><b>
                 Email <span class="glyphicon glyphicon-user" aria-hidden="true"></span> </b></h5></label>
-            <input type="email" class="form-control" placeholder="Digite o e-mail"  autofocus>
+            <input type="email" class="form-control" placeholder="Digite o e-mail"  autofocus data-ng-model="usuario.email" required >
 
         </div>
-        <div class="form-group">
+        <div class="form-group" name = "senha">
             <label for="password"> <h5 style ="color: white;"><b>
                 Senha <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </b></h5></label>
-            <input type="password" class="form-control" placeholder="Digite a senha" autofocus >
+            <input type="password" class="form-control" placeholder="Digite a senha" autofocus data-ng-model="usuario.senha" required>
         </div>
 
         <br>
 
-        <input type="submit" class="btn btn-default"  value="Login" style="color: #2aabd2;" >
-        <input type="button" class="btn btn-default" style="color: #2aabd2;" value="Cadastrar" onclick=window.location.href="/signup">
+        <input type="submit" class="btn btn-default"  value="Login">
+        <input type="button" class="btn btn-default"  value="Cadastrar" onclick=window.location.href="/signup">
+
     </form>
 
 
